@@ -22,6 +22,7 @@ The strategy screens a candidate universe for cointegrated pairs, models the spr
 | Rolling OLS | 60-day rolling window OLS, adaptive beta |
 | Kalman Filter | State-space model with continuous Bayesian updates |
 
+Kalman Filter:
 <img width="3570" height="2365" alt="spread_summary" src="https://github.com/user-attachments/assets/0d0838b8-e6b8-40f2-bd4d-0a994d50e218" />
 
 **Signal Generation**
