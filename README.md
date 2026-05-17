@@ -1,17 +1,17 @@
-# Statistical Arbitrage — ETF Pairs Trading
+# Statistical Arbitrage — Pairs Trading
 
 The strategy screens a candidate universe for cointegrated pairs, models the spread, and generates mean-reversion signals from the standardised z-score. Three hedge ratio models are benchmarked out-of-sample across all qualifying pairs.
 
 **Universe:** 13 ETF pairs across broad market, sector, commodities, and macro  
 **Train period:** 2018–2019 | **Test period:** 2024
 
-## Methodology
-
 **Pair Selection**
 - Engle-Granger cointegration test (p < 0.05)
 - ADF test on spread (p < 0.05)
 - Hurst exponent (H < 0.5 confirms mean-reversion)
 - Half-life of mean reversion via OLS of lagged spread
+
+<img width="502" height="415" alt="Screenshot 2026-05-17 at 11 11 33 PM" src="https://github.com/user-attachments/assets/fff9c797-385d-4c73-b06f-1b1356968460" />
 
 2 of 13 candidate pairs passed all filters: **SPY/QQQ** and **QQQ/XLK**
 
@@ -21,6 +21,8 @@ The strategy screens a candidate universe for cointegrated pairs, models the spr
 | Static OLS | Full-sample OLS regression, fixed beta |
 | Rolling OLS | 60-day rolling window OLS, adaptive beta |
 | Kalman Filter | State-space model with continuous Bayesian updates |
+
+<img width="3570" height="2365" alt="spread_summary" src="https://github.com/user-attachments/assets/0d0838b8-e6b8-40f2-bd4d-0a994d50e218" />
 
 **Signal Generation**
 - Z-score computed over a 20-day rolling window
@@ -43,20 +45,6 @@ The strategy screens a candidate universe for cointegrated pairs, models the spr
 | SPY/QQQ | Static | 1.93 | 23.7% | -5.66% | 58.2% | 15 | 16.8d |
 
 The Kalman filter dominates across all pairs, consistently delivering higher Sharpe and tighter drawdowns than Static or Rolling OLS — reflecting its ability to track non-stationary beta in real time.
-
-## Stack
-
-```
-yfinance · pandas · numpy · statsmodels · pykalman · matplotlib
-```
-
-## Structure
-
-```
-stats_arb.ipynb    # Data → pair screening → hedge ratio modelling → backtest → results
-```
-
----
 
 ## Limitations & Improvements
 
