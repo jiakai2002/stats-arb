@@ -2,6 +2,8 @@
 
 The strategy screens a candidate universe for cointegrated pairs, models the spread, and generates mean-reversion signals from the standardised z-score. Three hedge ratio models are benchmarked out-of-sample across all qualifying pairs.
 
+<img width="3570" height="2365" alt="spread_summary" src="https://github.com/user-attachments/assets/0d0838b8-e6b8-40f2-bd4d-0a994d50e218" />
+
 **Universe:** 13 ETF pairs across broad market, sector, commodities, and macro  
 **Train period:** 2018–2019 | **Test period:** 2024
 
@@ -11,19 +13,12 @@ The strategy screens a candidate universe for cointegrated pairs, models the spr
 - Hurst exponent (H < 0.5 confirms mean-reversion)
 - Half-life of mean reversion via OLS of lagged spread
 
-<img width="502" height="415" alt="Screenshot 2026-05-17 at 11 11 33 PM" src="https://github.com/user-attachments/assets/fff9c797-385d-4c73-b06f-1b1356968460" />
-
-2 of 13 candidate pairs passed all filters: **SPY/QQQ** and **QQQ/XLK**
-
 **Hedge Ratio Estimation**
 | Model | Description |
 |---|---|
 | Static OLS | Full-sample OLS regression, fixed beta |
 | Rolling OLS | 60-day rolling window OLS, adaptive beta |
 | Kalman Filter | State-space model with continuous Bayesian updates |
-
-Kalman Filter:
-<img width="3570" height="2365" alt="spread_summary" src="https://github.com/user-attachments/assets/0d0838b8-e6b8-40f2-bd4d-0a994d50e218" />
 
 **Signal Generation**
 - Z-score computed over a 20-day rolling window
