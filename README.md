@@ -1,8 +1,4 @@
-# Statistical Arbitrage — Pairs Trading Framework
-
-A pairs trading backtester built in Python, comparing three hedge ratio estimation methods across a broad universe of cointegrated equity pairs.
-
-## Overview
+# Statistical Arbitrage — ETF Pairs Trading
 
 The strategy screens a candidate universe for cointegrated pairs, models the spread, and generates mean-reversion signals from the standardised z-score. Three hedge ratio models are benchmarked out-of-sample across all qualifying pairs.
 

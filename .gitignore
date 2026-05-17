@@ -78,11 +78,3 @@ Thumbs.db
 .env
 config.json
 secrets.json
-
-# =========================
-# Backtest / experiment outputs
-# =========================
-results/
-backtests/
-equity_curves/
-reports/
