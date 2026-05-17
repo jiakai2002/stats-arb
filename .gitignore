@@ -1,0 +1,88 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.env/
+.envrc/
+.venv/
+env/
+
+# =========================
+# Jupyter / Notebooks
+# =========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.pyc
+
+# Output-heavy notebook artifacts (optional but recommended)
+*.html
+*.pdf
+
+# =========================
+# Data (IMPORTANT for quant projects)
+# =========================
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+*.h5
+
+# If you accidentally store raw price downloads
+*.pkl
+*.pickle
+
+# =========================
+# Logs / runtime outputs
+# =========================
+logs/
+*.log
+
+# =========================
+# IDEs / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# =========================
+# matplotlib / plots cache
+# =========================
+.matplotlib/
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# =========================
+# OS noise
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Secrets / API keys
+# =========================
+.env
+config.json
+secrets.json
+
+# =========================
+# Backtest / experiment outputs
+# =========================
+results/
+backtests/
+equity_curves/
+reports/
